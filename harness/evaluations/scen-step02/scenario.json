@@ -1,0 +1,106 @@
+{
+  "id": "scen-step02",
+  "mode": "scenario",
+  "passed": true,
+  "scenarioCount": 1,
+  "scenarios": [
+    {
+      "name": "북마크 추가·폼초기화·즐겨찾기·삭제",
+      "ok": true,
+      "initialShot": "harness/evaluations/scen-step02/s1-00-initial.png",
+      "storyboard": [
+        {
+          "kind": "fill",
+          "detail": "제목=React 공식문서",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-01.png"
+        },
+        {
+          "kind": "fill",
+          "detail": "URL=https://react.dev",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-02.png"
+        },
+        {
+          "kind": "click",
+          "detail": "추가",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-03.png"
+        },
+        {
+          "kind": "assert.textVisible",
+          "detail": "\"React 공식문서\" count=1 (기대 ≥1)",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-04.png"
+        },
+        {
+          "kind": "assert.inputEmpty",
+          "detail": "제목=\"\" (기대 빈값)",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-05.png"
+        },
+        {
+          "kind": "assert.inputEmpty",
+          "detail": "URL=\"\" (기대 빈값)",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-06.png"
+        },
+        {
+          "kind": "fill",
+          "detail": "제목=Mantine",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-07.png"
+        },
+        {
+          "kind": "fill",
+          "detail": "URL=https://mantine.dev",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-08.png"
+        },
+        {
+          "kind": "click",
+          "detail": "추가",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-09.png"
+        },
+        {
+          "kind": "assert.textVisible",
+          "detail": "\"Mantine\" count=2 (기대 ≥1)",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-10.png"
+        },
+        {
+          "kind": "assert.minCount",
+          "detail": ".mantine-Card-root count=2 (기대 ≥2)",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-11.png"
+        },
+        {
+          "kind": "click",
+          "detail": "즐겨찾기",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-12.png"
+        },
+        {
+          "kind": "click",
+          "detail": "삭제",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-13.png"
+        },
+        {
+          "kind": "assert.textGone",
+          "detail": "\"Mantine\" count=0 (기대 0)",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-14.png"
+        },
+        {
+          "kind": "assert.textVisible",
+          "detail": "\"React 공식문서\" count=1 (기대 ≥1)",
+          "ok": true,
+          "shot": "harness/evaluations/scen-step02/s1-15.png"
+        }
+      ]
+    }
+  ],
+  "failures": []
+}
