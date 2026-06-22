@@ -1,0 +1,56 @@
+{
+  "id": "eval-0001",
+  "stepId": "step-0",
+  "phaseSeq": 5,
+  "createdAt": "2026-06-22T07:42:10.128Z",
+  "mode": "playwright",
+  "score": 90,
+  "majorComplaints": 0,
+  "injected": false,
+  "evaluatedBy": "orchestrator(customer/ui/ux 관점) — 스크린샷·dom 직접 확인",
+  "rationale": "step 01 은 bookmark 엔티티 레이어(타입·zod·zustand persist·셀렉터) 전용 단계로 사용자 UI 산출물이 없다. 루브릭 베이스라인(앱 기동·0 에러·a11y 0·반응형·graceful 빈 상태)은 충족(100). 시각/UX 직접 확인 결과 깨진 곳은 없으나 화면은 미스타일 예시 스캐폴드 그대로다. fn(엔티티 API 완성·단위테스트 23건)·quality(ADR·게이트 green) 는 높게, ui/ux 는 'baseline 정상이나 bookmark UI 미착수'로 정직히 반영. 종합 90 = foundation 단계 통과 하한. 미스타일/예시 스캐폴드 잔존은 step 02 UI 의 책임으로 이관(minor).",
+  "dimensions": {
+    "ui": { "score": 84, "weight": 0.25, "label": "UI" },
+    "ux": { "score": 85, "weight": 0.2, "label": "UX" },
+    "fn": { "score": 95, "weight": 0.35, "label": "기능" },
+    "quality": { "score": 96, "weight": 0.2, "label": "품질" }
+  },
+  "complaints": [
+    { "severity": "minor", "area": "ui", "text": "템플릿 예시 스캐폴드('예시 목록 (FSD 표준 패턴 데모)') 가 그대로 노출 — step 02 에서 bookmark 목록 위젯으로 교체." },
+    { "severity": "minor", "area": "ui", "text": "Mantine 테마/Container 미적용(미스타일·좌측정렬). step 02 UI 에서 레이아웃·스타일 적용." },
+    { "severity": "info", "area": "scope", "text": "step 01 은 엔티티 레이어 전용 — 사용자 UI/상호작용은 step 02·03 산출. 상호작용 E2E·스토리보드 첨부는 UI 생긴 뒤 수행." }
+  ],
+  "observations": {
+    "bodyNonEmpty": true,
+    "titleMatches": true,
+    "headingPresent": true,
+    "consoleErrors": 0,
+    "serverReady": true,
+    "layoutStable": true,
+    "hasViewportMeta": true,
+    "responsiveLayout": true,
+    "hasLandmarks": true,
+    "appMounted": true,
+    "runtimeErrors": 0,
+    "navigable": true,
+    "a11yViolations": 0,
+    "gatesGreen": true,
+    "screenshotOk": true,
+    "domOk": true,
+    "screenshotMobileOk": true,
+    "observable": true,
+    "_raw": {
+      "title": "bookmark-manager",
+      "rootChildren": 1,
+      "consoleErrors": [],
+      "runtimeErrors": [],
+      "hasLandmarks": true,
+      "a11yViolations": 0,
+      "responsiveLayout": true,
+      "navigable": true
+    }
+  },
+  "screenshot": "harness/evaluations/eval-0001/screenshot.png",
+  "screenshotMobile": "harness/evaluations/eval-0001/screenshot-mobile.png",
+  "dom": "harness/evaluations/eval-0001/dom.html"
+}
