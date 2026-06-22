@@ -1,0 +1,24 @@
+{
+  "useGit": true,
+  "useMcp": true,
+  "mcpServers": [],
+  "skipGitFlow": false,
+  "gitRemote": "git@github.com:Agratos/harness-setup-test.git",
+  "notionDashboardPageId": "38305d7c-de47-80a9-aa8d-f15456887190",
+  "preflight": {
+    "ranAt": "2026-06-22T07:18:42.154Z",
+    "gitInitDone": false,
+    "gitPresentBefore": true,
+    "checks": {
+      "gitRemote": {
+        "url": "git@github.com:Agratos/harness-setup-test.git",
+        "reachable": true
+      },
+      "notion": {
+        "url": "https://www.notion.so/Harness-habit-tracker-Inc-38305d7cde4780a9aa8df15456887190",
+        "pageId": "38305d7c-de47-80a9-aa8d-f15456887190",
+        "reachable": true
+      }
+    }
+  }
+}
