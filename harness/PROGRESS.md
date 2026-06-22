@@ -7,9 +7,15 @@
 
 ## 현재 상태
 
-### ⚪ 미시작 — 새 프로젝트
-- 아직 시작 전입니다. `node scripts/init-project.mjs` → `/start-project` → `/run-cycle` 순으로 진행하세요.
-- **마지막 갱신**: (reset-project 로 초기화됨)
+### 🔵 진행 중 — 5차 테스트 (bookmark-manager)
+- 개인 북마크 관리 SPA (React19+TS+Vite+Mantine+Zustand persist+Zod, FSD, 서버 없음/localStorage).
+- planSteps: 01-entity-bookmark → 02-add-list → 03-filter-search
+- 원격 github.com:Agratos/harness-setup-test (5차용 리셋·main만) · Notion 허브 38305d7c… (bookmark-manager 재초기화 완료).
+- **step 1/3 (01-entity-bookmark)**, 브랜치 step/01-entity-bookmark, phase design→implement.
+- 백그라운드 에이전트 실행 중: architect(ADR) + entity-modeler(src/entities/bookmark 구현+단위테스트).
+- Notion: 계획 3행·사이클 1 행(계획 relation)·콜아웃 사이클 1/3·top-3 불릿 갱신 완료.
+- **다음 1개 행동**: 에이전트 완료 → 구현 검토 → step 브랜치 commit(state.json add 금지) → loop.mjs 로 verify 전진(done-gate) → evaluate → debate → merge → step 2.
+- **마지막 갱신**: 2026-06-22 (5차 부트스트랩 + step1 design/implement 착수)
 
 ## 갱신 규칙
 1. 단계 시작/완료 시 해당 항목의 "다음 할 일"·"마지막 갱신"을 즉시 갱신한다.
