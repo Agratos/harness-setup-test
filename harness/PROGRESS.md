@@ -7,16 +7,14 @@
 
 ## 현재 상태
 
-### 🔵 진행 중 — 5차 테스트 (bookmark-manager)
+### 🟢 완료 — 5차 테스트 (bookmark-manager) — 3/3 사이클 완주
 - 개인 북마크 관리 SPA (React19+TS+Vite+Mantine+Zustand persist+Zod, FSD, 서버 없음/localStorage).
-- planSteps: 01-entity-bookmark → 02-add-list → 03-filter-search
-- 원격 github.com:Agratos/harness-setup-test (5차용 리셋·main만) · Notion 허브 38305d7c… (bookmark-manager 재초기화).
-
-- **✅ step 1/3 (01-entity-bookmark) 완료·main 병합**(commit 150869b merge). 엔티티 레이어+단위 23건. done-gate 종합 90 래치. Notion 사이클1 완료·평가90·테스트 2행.
-- **🔵 step 2/3 (02-add-list) 진행 중**, 브랜치 step/02-add-list, phase decompose→design/implement.
-  - 백그라운드 에이전트 실행 중: architect(02-add-list-arch.md) + ui(features/add-bookmark·widgets/bookmark-list·pages/home).
-  - Notion 사이클 2 행 생성(계획 step02 relation)·콜아웃 사이클 2/3·top-3 불릿 갱신.
-  - **다음 1개 행동**: ui 완료 → 게이트 재검증·커밋 → verify → **evaluate(실제 UI 스크린샷)** → **eval-scenario E2E(추가/폼초기화/삭제/즐겨찾기) + notion-storyboard.mjs 로 🧪 테스트 관리에 스토리보드 첨부**(이번 세션 신규기능 dogfooding) → debate → merge → step 3.
+- 원격 github.com:Agratos/harness-setup-test (main) · Notion 허브 38305d7c… 🟢 완료.
+- **step 1 (엔티티)** ✅ 병합 · 평가 90 · 단위 23건
+- **step 2 (추가·목록 UI)** ✅ 병합 · 평가 94 · 컴포넌트 34/34 + E2E 15/15 + 스토리보드 16컷 첨부
+- **step 3 (필터·검색·통계)** ✅ 병합 · 평가 95 · 컴포넌트 47/47 + E2E 22/22 + 스토리보드 23컷 첨부
+- `harness/state.json` status=done (phaseSeq 21). main 최신 = step/03 merge.
+- **dogfooding 성과**: 이번 세션 신규 스토리보드 첨부 기능이 step2·3 에서 실전 동작. 하네스 버그 4건 발견(harness-setup 백로그 기록).
 
 - **5차에서 발견한 하네스 버그(harness-setup/테스트 후에 수정해야할것들.md 에 기록):**
   1. reset-project 정체성 치환이 `src/app/app.test.tsx` 누락 → 복사 직후 done-gate test FAIL.
