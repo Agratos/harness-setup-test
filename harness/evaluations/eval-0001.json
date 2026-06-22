@@ -1,5 +1,5 @@
 {
-  "id": "01-entity-bookmark",
+  "id": "eval-0001",
   "stepId": "step-0",
   "phaseSeq": 5,
   "createdAt": "2026-06-22T07:42:10.128Z",
@@ -50,7 +50,7 @@
       "navigable": true
     }
   },
-  "screenshot": "harness/evaluations/01-entity-bookmark/screenshot.png",
-  "screenshotMobile": "harness/evaluations/01-entity-bookmark/screenshot-mobile.png",
-  "dom": "harness/evaluations/01-entity-bookmark/dom.html"
+  "screenshot": "harness/evaluations/eval-0001/screenshot.png",
+  "screenshotMobile": "harness/evaluations/eval-0001/screenshot-mobile.png",
+  "dom": "harness/evaluations/eval-0001/dom.html"
 }
