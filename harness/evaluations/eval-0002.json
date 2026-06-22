@@ -1,0 +1,61 @@
+{
+  "id": "eval-0002",
+  "stepId": "step-1",
+  "phaseSeq": 12,
+  "createdAt": "2026-06-22T08:04:08.938Z",
+  "mode": "playwright",
+  "score": 94,
+  "majorComplaints": 0,
+  "injected": false,
+  "evaluatedBy": "orchestrator(customer/ui/ux 관점) — 스크린샷·dom 직접 확인 + eval-scenario E2E 15/15",
+  "rationale": "step 02 는 추가 폼 + 목록 UI. eval-playwright 베이스라인 100(0 에러·a11y 0·반응형). 스크린샷 직접 확인: Mantine 스타일 폼(제목·URL·태그 + 추가), '북마크 관리' 타이틀이 Container 중앙 정렬, 빈 상태 안내까지 정상 — 실제 사용 가능한 UI. 상호작용 E2E(eval-scenario) 15/15 통과: 추가→폼 초기화(inputEmpty)·카드 2개·즐겨찾기 토글·삭제(textGone) 모두 실제 브라우저에서 검증. 감점은 App.tsx 스캐폴드 헤더('멀티 에이전트 자율 개발 하네스' 부제)가 북마크 앱과 무관하게 남아 있고 Container 밖 좌측정렬이라 본문(중앙)과 어긋나는 점(minor, 백로그 B). 기능·품질 우수.",
+  "dimensions": {
+    "ui": { "score": 90, "weight": 0.25, "label": "UI" },
+    "ux": { "score": 93, "weight": 0.2, "label": "UX" },
+    "fn": { "score": 98, "weight": 0.35, "label": "기능" },
+    "quality": { "score": 96, "weight": 0.2, "label": "품질" }
+  },
+  "complaints": [
+    { "severity": "minor", "area": "ui", "text": "App.tsx 스캐폴드 헤더 부제 '멀티 에이전트 자율 개발 하네스 — FSD 웹프론트 스캐폴드' 가 북마크 앱과 무관하게 잔존. 제거 또는 프로젝트 설명으로 교체 권장." },
+    { "severity": "minor", "area": "ui", "text": "App.tsx h1/부제가 Container 밖 좌측정렬이라 중앙 정렬된 본문과 시각적으로 어긋남(백로그 B 스캐폴드 헤더 정렬)." }
+  ],
+  "interactionE2E": {
+    "scenario": "북마크 추가·폼초기화·즐겨찾기·삭제",
+    "passed": true,
+    "assertions": "15/15",
+    "storyboard": "harness/evaluations/scen-step02/ (16컷) → 🧪 테스트 관리 행에 첨부됨"
+  },
+  "observations": {
+    "bodyNonEmpty": true,
+    "titleMatches": true,
+    "headingPresent": true,
+    "consoleErrors": 0,
+    "serverReady": true,
+    "layoutStable": true,
+    "hasViewportMeta": true,
+    "responsiveLayout": true,
+    "hasLandmarks": true,
+    "appMounted": true,
+    "runtimeErrors": 0,
+    "navigable": true,
+    "a11yViolations": 0,
+    "gatesGreen": true,
+    "screenshotOk": true,
+    "domOk": true,
+    "screenshotMobileOk": true,
+    "observable": true,
+    "_raw": {
+      "title": "bookmark-manager",
+      "rootChildren": 3,
+      "consoleErrors": [],
+      "runtimeErrors": [],
+      "hasLandmarks": true,
+      "a11yViolations": 0,
+      "responsiveLayout": true,
+      "navigable": true
+    }
+  },
+  "screenshot": "harness/evaluations/eval-0002/screenshot.png",
+  "screenshotMobile": "harness/evaluations/eval-0002/screenshot-mobile.png",
+  "dom": "harness/evaluations/eval-0002/dom.html"
+}

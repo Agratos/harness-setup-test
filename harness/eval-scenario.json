@@ -1,0 +1,24 @@
+{
+  "scenarios": [
+    {
+      "name": "북마크 추가·폼초기화·즐겨찾기·삭제",
+      "steps": [
+        { "fill": { "label": "제목", "value": "React 공식문서" } },
+        { "fill": { "label": "URL", "value": "https://react.dev" } },
+        { "click": { "text": "추가" } },
+        { "assert": "textVisible", "text": "React 공식문서" },
+        { "assert": "inputEmpty", "label": "제목" },
+        { "assert": "inputEmpty", "label": "URL" },
+        { "fill": { "label": "제목", "value": "Mantine" } },
+        { "fill": { "label": "URL", "value": "https://mantine.dev" } },
+        { "click": { "text": "추가" } },
+        { "assert": "textVisible", "text": "Mantine" },
+        { "assert": "minCount", "selector": ".mantine-Card-root", "expect": 2 },
+        { "click": { "text": "즐겨찾기" } },
+        { "click": { "text": "삭제" } },
+        { "assert": "textGone", "text": "Mantine" },
+        { "assert": "textVisible", "text": "React 공식문서" }
+      ]
+    }
+  ]
+}
