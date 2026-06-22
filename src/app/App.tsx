@@ -7,7 +7,7 @@ export const App = () => {
 		<Providers>
 			<main>
 				<h1>bookmark-manager</h1>
-				<p>멀티 에이전트 자율 개발 하네스 — FSD 웹프론트 스캐폴드</p>
+				<p>내 북마크를 한 곳에서 관리</p>
 				<HomePage />
 			</main>
 		</Providers>

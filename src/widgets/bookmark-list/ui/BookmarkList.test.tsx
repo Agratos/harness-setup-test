@@ -2,9 +2,11 @@ import type { ReactNode } from 'react';
 import { MantineProvider } from '@mantine/core';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import { describe, expect, it } from 'vitest';
+import { beforeEach, describe, expect, it } from 'vitest';
 
 import { useBookmarkStore } from '@/entities/bookmark';
+
+import { useFilterStore } from '@/features/filter-bookmarks';
 
 import { BookmarkList } from '@/widgets/bookmark-list';
 
@@ -28,6 +30,10 @@ const seedBookmark = () => {
 };
 
 describe('BookmarkList', () => {
+	beforeEach(() => {
+		useFilterStore.getState().reset();
+	});
+
 	it('빈 목록이면 안내 문구를 표시한다', () => {
 		useBookmarkStore.setState({ bookmarks: [] });
 		render(<BookmarkList />, { wrapper: Wrapper });
