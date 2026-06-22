@@ -1,0 +1,50 @@
+{
+  "id": "eval-0003",
+  "stepId": "step-2",
+  "phaseSeq": 19,
+  "createdAt": "2026-06-22T08:23:52.691Z",
+  "mode": "playwright",
+  "score": 95,
+  "majorComplaints": 0,
+  "injected": false,
+  "evaluatedBy": "orchestrator(customer/ui/ux 관점) — 스크린샷·dom 직접 확인 + eval-scenario E2E 22/22",
+  "rationale": "step 03 은 태그 필터·검색·즐겨찾기만·통계. 스크린샷 직접 확인: 검색 TextInput·즐겨찾기만 Checkbox·통계('전체 N · 즐겨찾기 M')가 폼/목록과 함께 Container 중앙에 정상 배치. App.tsx 부제가 '내 북마크를 한 곳에서 관리'로 교체돼 step02 minor(스캐폴드 부제) 해소. 상호작용 E2E 22/22 통과: 검색(Mantine만)·검색해제 복원·즐겨찾기만(Zustand만)·해제 복원 실브라우저 검증. SegmentedControl 회피(Chip.Group/Checkbox)로 E2E 구동성 확보(4차 발견 반영). 잔여 minor: h1/부제 Container 밖 좌측정렬(백로그 B). 기능·품질 우수.",
+  "dimensions": {
+    "ui": { "score": 92, "weight": 0.25, "label": "UI" },
+    "ux": { "score": 95, "weight": 0.2, "label": "UX" },
+    "fn": { "score": 98, "weight": 0.35, "label": "기능" },
+    "quality": { "score": 96, "weight": 0.2, "label": "품질" }
+  },
+  "complaints": [
+    { "severity": "minor", "area": "ui", "text": "App.tsx h1/부제가 Container 밖 좌측정렬 — 중앙 본문과 시각적으로 어긋남(백로그 B, 템플릿 스캐폴드 헤더)." }
+  ],
+  "interactionE2E": {
+    "scenario": "검색·즐겨찾기 필터·통계",
+    "passed": true,
+    "assertions": "22/22",
+    "storyboard": "harness/evaluations/scen-step03/ (23컷) → 🧪 테스트 관리 행 첨부"
+  },
+  "observations": {
+    "bodyNonEmpty": true,
+    "titleMatches": true,
+    "headingPresent": true,
+    "consoleErrors": 0,
+    "serverReady": true,
+    "layoutStable": true,
+    "hasViewportMeta": true,
+    "responsiveLayout": true,
+    "hasLandmarks": true,
+    "appMounted": true,
+    "runtimeErrors": 0,
+    "navigable": true,
+    "a11yViolations": 0,
+    "gatesGreen": true,
+    "screenshotOk": true,
+    "domOk": true,
+    "screenshotMobileOk": true,
+    "observable": true
+  },
+  "screenshot": "harness/evaluations/eval-0003/screenshot.png",
+  "screenshotMobile": "harness/evaluations/eval-0003/screenshot-mobile.png",
+  "dom": "harness/evaluations/eval-0003/dom.html"
+}
